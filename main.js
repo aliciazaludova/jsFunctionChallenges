@@ -46,9 +46,24 @@
 
 let answersArray = [];
 
-function isPrime() {
+function isPrime(num) {
+    for (var i = 2; i < num; i++) {
+      if (num % i === 0) {
+          return false;
+          } else {
+              return num !== 1;
+              }
+      }
+};
+var seven = isPrime(7);
 
-}
+console.log(seven);
+
+// function printToDom(result, divId) {
+// // take string and innerHTML to the divID
+// var getId = document.getElementById(divId);
+// getId.innerHTML += result;
+// }
 
 function isEven() {
     
@@ -76,7 +91,9 @@ function is10Mult() {
 // Example:
 
 // challenge4(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]) //["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
-// Challenge #5: Sort by Last Char
+
+
+// Challenge #5: Sort by Last Char =================
 // Given a string of words (x), you need to return an array of the words, sorted alphabetically by the final character in each.
 
 // If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
