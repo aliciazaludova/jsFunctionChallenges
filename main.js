@@ -12,7 +12,7 @@ console.log('can you see this?');
 
 // Your task is to write a function that takes two parameters: the year of birth and the year to count years in relation to. As Philip is getting more curious every day he may soon want to know how many years it was until he would be born, so your function needs to work with both dates in the future and in the past.
 
-let age = 0;
+let age = 0; // not using this though
 function difference(birthYear, relativeYear) {
     if (birthYear > relativeYear) {
         return birthYear - relativeYear;
@@ -20,8 +20,19 @@ function difference(birthYear, relativeYear) {
         return relativeYear - birthYear;
     }
 };
-var question1 = difference(2000, 2099);
-console.log(question1);
+var difference1 = difference(2000, 2099);
+var difference2 = difference(1992, 3014);
+
+console.log(difference1, difference2);
+
+function printToDom(result, divId) {
+    // take string and innerHTML to the divID
+    var getId = document.getElementById(divId);
+    getId.innerHTML += result;
+}
+
+printToDom(difference1, 'challenge-1a');
+printToDom(difference2, 'challenge-1b');
 
 // Provide output in this format: For dates in the future: "You are ... year(s) old." For dates in the past: "You will be born in ... year(s)." If the year of birth equals the year requested return: "You were born this very year!"
 
