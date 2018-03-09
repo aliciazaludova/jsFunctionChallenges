@@ -1,11 +1,3 @@
-console.log('can you see this?');
-
-// writeToDom("I go in div#2", "challenge-2");
-
-// writeToDom(domString, domId){
-// //   <DO STUFF HERE to put "I go in div#2" in the div is id="challenge-2">
-// }
-
 // Challenges
 // Challenge #1: How old will I be in 2099?
 // Philip's just turned four and he wants to know how old he will be in various years in the future such as 2090 or 3044. His parents can't keep up calculating this so they've begged you to help them out by writing a programme that can answer Philip's endless questions.
@@ -13,6 +5,7 @@ console.log('can you see this?');
 // Your task is to write a function that takes two parameters: the year of birth and the year to count years in relation to. As Philip is getting more curious every day he may soon want to know how many years it was until he would be born, so your function needs to work with both dates in the future and in the past.
 
 let age = 0; // not using this though
+var resultString = "";
 function difference(birthYear, relativeYear) {
     if (birthYear > relativeYear) {
         return birthYear - relativeYear;
@@ -22,8 +15,6 @@ function difference(birthYear, relativeYear) {
 };
 var difference1 = difference(2000, 2099);
 var difference2 = difference(1992, 3014);
-
-console.log(difference1, difference2);
 
 function printToDom(result, divId) {
     // take string and innerHTML to the divID
